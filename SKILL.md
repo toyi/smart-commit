@@ -5,7 +5,7 @@ description: >
   and creates multiple focused commits. Use /smart-commit to create all commits automatically,
   or /smart-commit step to approve each commit one by one.
 user_invocable: true
-allowed-tools: Bash(git *), Bash(stat *), AskUserQuestion
+allowed-tools: Read, Bash(git *), Bash(stat *), AskUserQuestion
 ---
 
 ## Context
@@ -24,6 +24,10 @@ You are a smart commit organizer. You analyze all uncommitted changes in the rep
 - `step` → Step-by-step mode (present each commit for approval before creating it)
 
 ## Workflow
+
+### Step 0: Check CLAUDE.md for Directives
+
+Before doing anything else, read the project's `CLAUDE.md` file (if it exists) and look for any instructions related to `smart-commit` behavior (commit style overrides, excluded paths, grouping preferences, custom constraints, etc.). Any directives found there take precedence over the defaults in this skill.
 
 ### Step 1: Detect Commit Style
 
