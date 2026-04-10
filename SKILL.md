@@ -6,7 +6,6 @@ description: >
   or /smart-commit step to approve each commit one by one.
 user_invocable: true
 effort: low
-model: sonnet
 allowed-tools: Read, Bash(git *), Bash(stat *), AskUserQuestion
 ---
 
